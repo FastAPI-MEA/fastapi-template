@@ -1,0 +1,22 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+fastapi = {extras = ["all"], version = "*"}
+alembic = "*"
+psycopg2 = "*"
+databases = {extras = ["postgresql"], version = "*"}
+asyncpg = "*"
+python-jose = {extras = ["cryptography"], version = "*"}
+passlib = {extras = ["bcrypt"], version = "*"}
+python-multipart = "*"
+pytest = "*"
+sqlalchemy-utils = "*"
+aioredis = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"

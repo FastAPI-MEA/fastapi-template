@@ -28,6 +28,12 @@ Next, you'll want to run `pipenv install` to ensure you get a Python environment
 
 After this, we head to the .env to edit some of the values to your taste. Each value is explained in the [Config section](#config).
 
+### Databases
+Databases can be quite dicey and I'm happy to say Alembic is used to handle migrations and whatnots. This coupled with SQLAlchemy makes the world a better place. Whilst PostgreSQL is assumed to be the default database. You can of course edit things to your liking.
+
+- Create migrations with `docker-compose run web alembic revision -m "Migration message here"`.
+- Run migrations within Docker with `docker-compose run web alembic upgrade head`.
+
 
 ## Config
 This section documents configuration options and the meaning of settings values and how to use them.
